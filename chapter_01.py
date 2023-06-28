@@ -27,10 +27,15 @@ print('Package imported')
 
 # Uso de la webcam
 
+# 0 es para la webcam, otros números es por si tenés más cámaras
 cap = cv2.VideoCapture(0)
+
+# Los settings tienen códigos. 3 es para width y 4 es para height
 cap.set(3, 640)
 cap.set(4, 480)
 
+# También hay para el brillo:
+cap.set(10, 50)
 while True:
     success, img = cap.read()
     cv2.imshow("Webcam", img)
